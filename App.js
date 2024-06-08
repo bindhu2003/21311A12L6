@@ -10,7 +10,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/data');
+      const response = await fetch('http://localhost:9876/api/data'); // Change the URL to match your Flask backend route
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
@@ -31,8 +31,7 @@ function App() {
             <p>Numbers: {data.windowPrevState.join(', ')}</p>
             <h2>Current Window State</h2>
             <p>Numbers: {data.windowCurrState.join(', ')}</p>
-            <h2>All Numbers</h2>
-            <p>Numbers: {data.numbers.join(', ')}</p>
+            <h2>All Numbers</h2>            <p>Numbers: {data.numbers.join(', ')}</p>
             <h2>Average</h2>
             <p>{data.average}</p>
           </div>
