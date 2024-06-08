@@ -10,7 +10,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:9876/api/data'); // Change the URL to match your Flask backend route
+      const response = await fetch('http://localhost:9876/api/data');
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
